@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tratamento de erros</title>
+
+    <script>
+        let video = Array()
+
+        video[1] = Array()
+        video[1]['Nome'] = 'Fullmetal Alchemist'
+        video[1]['Categoria'] = 'Anime'
+
+        console.log(video)
+
+        function getVideo(video){
+            try {
+                console.log(video[0]['Nome'])
+                console.log("API fora do ar")
+            } catch (error) {
+                tratarErro(error)
+                console.log('Houve um problema externo')
+
+                throw new Error ('Houve um erro')
+            } finally {
+                console.log('Sempre passa aqui')
+            }
+        }
+
+        function tratarErro(erro){
+            console.log('O erro é: ' + erro)
+        }
+
+        getVideo(video)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

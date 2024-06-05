@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS aplicando CSS</title>
+
+    <style>
+        .estilo{
+    background-color: lightblue;
+    width: 400px;
+    height: 400px;
+}
+    </style>
+
+    <script>
+        function trocarEstilo(estilizacao){
+            let backgroudChange = document.body
+            backgroudChange.style.background = estilizacao
+        }
+
+        function trocarH1(cor){
+            let changeH1 = document.querySelector('.h1Changed')
+            changeH1.style.color = cor
+        }
+
+        function quadradoDinamico(){
+            document.getElementById('quadrado').className = 'estilo'
+        }
+    </script>
+</head>
+<body>
+    <h1 class="h1Changed">
+        Mudança de Letra
+    </h1>
+    <button type="button" onclick="trocarH1('orange')">Laranja</button>
+    <button type="button" onclick="trocarH1('grey')">Cinza</button>
+    <button type="button" onclick="trocarH1('blue')">Azul</button>
+    <button type="button" onclick="trocarH1('red')">Vermelho</button>
+    <button type="button" onclick="trocarH1('green')">Verde</button>
+    <h1>
+        Mudança de BackGround
+    </h1>
+    <button type="button" onclick="trocarEstilo('orange')">Laranja</button>
+    <button type="button" onclick="trocarEstilo('grey')">Cinza</button>
+    <button type="button" onclick="trocarEstilo('blue')">Azul</button>
+    <button type="button" onclick="trocarEstilo('red')">Vermelho</button>
+    <button type="button" onclick="trocarEstilo('green')">Verde</button>
+
+    <h1>
+        Mudar Quadrado
+    </h1>
+
+    <div style="border: solid 1px #000; width: 100px; height: 100px;" id="quadrado">
+
+
+    </div>
+    <button type="button" onclick="quadradoDinamico()">Mudar</button>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+
+    <script>
+        let janela
+
+        function popUp(){
+            janela = window.open('https://cogupack.com.br/', 'nova_janela', 'width=200')
+        }
+
+        function closePopUp(){
+            janela.close()
+        }
+
+        function imprimirPagina(){
+            window.print()
+        }
+    </script>
+</head>
+<body>
+    <button onclick="popUp()">
+        Abrir Janela
+    </button>
+    <button onclick="closePopUp()">
+        Fechar Janela
+    </button>
+    <button onclick="print()">
+        Imprimir pagina
+    </button>
+</body>
+</html>
